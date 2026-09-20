@@ -65,12 +65,7 @@ Ver el `README.md` de cada subcarpeta de `fases/07-evaluacion/` y los `.csv`/`.x
 resultados detallados de retrieval, sentimiento, impacto financiero, embeddings y robustez
 temporal.
 
-## Memoria y defensa
-
-La memoria completa del TFM y las diapositivas de defensa no están en este repositorio.
-
 ## Licencia
 
 MIT — ver [LICENSE](LICENSE). Las noticias scrapeadas usadas como fuente de datos pertenecen a
-sus medios de origen; revisa restricciones de reutilización antes de redistribuir el dataset
-completo.
+sus medios de origen.
