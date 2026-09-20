@@ -1,0 +1,25 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+seaborn
+umap-learn
+tqdm
+python-dotenv
+openpyxl
+
+# vector store / embeddings
+pinecone
+sentence-transformers
+FlagEmbedding
+pyarrow
+
+# splitter (Fase 5)
+llama-index-core
+transformers
+sentencepiece
+
+# generación de predicciones (Fase 7.2)
+anthropic
+google-genai
