@@ -1,12 +1,13 @@
 # RAG Financiero sobre Noticias
 
-Pipeline RAG (Retrieval-Augmented Generation) sobre noticias financieras: scraping y limpieza de
-noticias, enriquecimiento de metadatos, segmentación, generación de embeddings, indexación en
+Pipeline RAG (Retrieval-Augmented Generation) sobre noticias financieras: scraping de noticias vía
+Exa, limpieza, enriquecimiento de metadatos, segmentación, generación de embeddings, indexación en
 Pinecone y evaluación del sistema (recuperación, sentimiento, impacto financiero, embeddings y
 robustez temporal). Trabajo Fin de Máster (TFM).
 
 ## Stack
 
+- **Scraping**: [Exa](https://exa.ai/) (`exa_py`)
 - **Vector store**: [Pinecone](https://www.pinecone.io/)
 - **Embeddings**: `BAAI/bge-m3` (vía `sentence-transformers` / `FlagEmbedding`)
 - **Segmentación**: LlamaIndex (`llama-index-core`)
@@ -17,6 +18,7 @@ robustez temporal). Trabajo Fin de Máster (TFM).
 
 ```
 fases/
+├── 00-scrapeo-noticias/               Scraping de noticias financieras vía Exa
 ├── 01-limpieza-estructural/          Limpieza inicial del scraping
 ├── 02-eliminacion-noticias-vacias/   Filtrado de noticias vacías/inválidas
 ├── 03-enriquecimiento-metadatos/     Enriquecimiento de metadatos (ticker, sector, periodo...)
@@ -46,8 +48,8 @@ cp .env.example .env   # y rellena tus claves
 
 Cada notebook intenta primero leer credenciales desde `google.colab.userdata`; si no está
 disponible (entorno local), pide la clave por `getpass`/variable de entorno. Variables usadas
-(ver `.env.example`): `PINECONE_API_KEY`, `PINECONE_INDEX_NAME`, `ANTHROPIC_API_KEY`,
-`GEMINI_API_KEY`.
+(ver `.env.example`): `EXA_API_KEY`, `PINECONE_API_KEY`, `PINECONE_INDEX_NAME`,
+`ANTHROPIC_API_KEY`, `GEMINI_API_KEY`.
 
 ## Datos
 

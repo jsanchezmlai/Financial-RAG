@@ -9,6 +9,9 @@ tqdm
 python-dotenv
 openpyxl
 
+# scraping (Fase 0)
+exa_py
+
 # vector store / embeddings
 pinecone
 sentence-transformers
